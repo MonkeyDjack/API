@@ -1,0 +1,60 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "array",
+    "items": {
+        "$ref": "#/definitions/WelcomeElement"
+    },
+    "definitions": {
+        "WelcomeElement": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "Age": {
+                    "type": "integer"
+                },
+                "ClassName": {
+                    "type": "string"
+                },
+                "Grade": {
+                    "anyOf": [
+                        {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 10
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "Semester": {
+                    "$ref": "#/definitions/Semester"
+                },
+                "studentFirstName": {
+                    "type": "string"
+                },
+                "studentLastName": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "Age",
+                "ClassName",
+                "Grade",
+                "Semester",
+                "studentFirstName",
+                "studentLastName"
+            ],
+            "title": "WelcomeElement"
+        },
+        "Semester": {
+            "type": "string",
+            "enum": [
+                "period 1",
+                "period 2",
+                "period 3"
+            ],
+            "title": "Semester"
+        }
+    }
+}

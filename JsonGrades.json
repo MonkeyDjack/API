@@ -1,0 +1,81 @@
+{
+    "title": "An array of items",
+    "items": {
+        "title": "An object value",
+      "required": [
+        "Age",
+        "ClassName",
+        "Grade",
+        "Semester",
+        "studentFirstName",
+        "studentLastName"
+      ],
+      "properties": {
+        "Age": {
+          "title": "An integer value",
+          "default": " ",
+          "pattern": "^(.*)$",
+          "examples": [
+            "21"
+          ],
+          "$id": "#/items/properties/Age",
+          "type": "integer"
+        },
+        "ClassName": {
+          "title": "An string value",
+          "default": " ",
+          "pattern": "^(.*)$",
+          "examples": [
+            "FED"
+          ],
+          "$id": "#/items/properties/ClassName",
+          "type": "string"
+        },
+        "Grade": {
+          "title": "An integer value",
+          "default": " ",
+          "pattern": "^(.*)$",
+          "examples": [
+            "6"
+          ],
+          "$id": "#/items/properties/Grade",
+          "anyOf": [
+            { "type": "string" },
+            { "type": "null" },
+            { "minimum": 0 },
+            { "maximum": 10 }
+          ]
+        },
+        "Semester": {
+          "title": "A string value",
+          "default": " ",
+          "pattern": "^(.*)$",
+          "examples": [
+            "period 1"
+          ],
+          "$id": "#/items/properties/Semester",
+          "type": "string"
+        },
+        "studentFirstName": {
+          "title": "A string value",
+          "default": " ",
+          "pattern": "^(.*)$",
+          "examples": [
+            "John"
+          ],
+          "$id": "#/items/properties/studentFirstName",
+          "type": "string"
+        },
+        "studentLastName": {
+          "title": "A string value",
+          "default": " ",
+          "pattern": "^(.*)$",
+          "examples": [
+            "Doe"
+          ],
+          "$id": "#/items/properties/studentLastName",
+          "type": "string"
+        }
+      }
+    }
+}

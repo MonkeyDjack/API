@@ -1,0 +1,36 @@
+{
+    "title": "An array of items",
+    "items": {
+        "title": "An object value",
+      "required": [
+        
+        "ClassName",       
+        "studentFirstName"
+        
+      ],
+      "properties": {
+        "ClassName": {
+          "title": "An string value",
+          "default": " ",
+          "pattern": "^(.*)$",
+          "examples": [
+            "FED"
+          ],
+          "$id": "#/items/properties/ClassName",
+          "type": "string"
+        },
+
+        "studentFirstName": {
+          "title": "A string value",
+          "default": " ",
+          "pattern": "^(.*)$",
+          "examples": [
+            "John"
+          ],
+          "$id": "#/items/properties/studentFirstName",
+          "type": "string"
+        }
+
+      }
+    }
+}
